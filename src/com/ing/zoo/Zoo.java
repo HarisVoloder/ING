@@ -25,6 +25,15 @@ public class Zoo {
         Zebra marty = new Zebra();
         marty.name = "marty";
 
+        List<Animal> animalList = new ArrayList<>();
+        animalList.add(henk);
+        animalList.add(elsa);
+        animalList.add(dora);
+        animalList.add(wally);
+        animalList.add(marty);
+
+
+
         Scanner scanner = new Scanner(System.in);
         System.out.print("Voer uw command in: ");
 
@@ -35,15 +44,18 @@ public class Zoo {
                 System.out.println("contains command");
                 switch (command){
                     case "hello":
-                        henk.sayHello();
+                       animalList.forEach(Animal::sayHello);
                         break;
                     case "give meat":
-                        henk.eatMeat();
+                        wally.eatMeat();
                         break;
                     case "give leaves":
                         elsa.eatLeaves();
+                        dora.eatLeaves();
+                        marty.eatLeaves();
                         break;
                     case "perform trick":
+                        dora.performTrick();
                         wally.performTrick();
                         break;
                     default:

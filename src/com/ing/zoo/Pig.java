@@ -2,7 +2,7 @@ package com.ing.zoo;
 
 import java.util.Random;
 
-public class Pig {
+public class Pig implements Animal{
     public String name;
     public String helloText;
     public String eatText;
@@ -12,8 +12,8 @@ public class Pig {
     {
     }
 
-    public void sayHello()
-    {
+    @Override
+    public void sayHello() {
         helloText = "splash";
         System.out.println(helloText);
     }
@@ -44,4 +44,6 @@ public class Pig {
         }
         System.out.println(trick);
     }
+
+
 }
