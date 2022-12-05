@@ -10,7 +10,7 @@ public class Zoo {
         commands[1] = "give leaves";
         commands[2] = "give meat";
         commands[3] = "perform trick";
-        System.out.println("Test");
+        System.out.println("Test1");
 
         Lion henk = new Lion();
         henk.name = "henk";
