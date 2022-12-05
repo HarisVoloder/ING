@@ -32,7 +32,19 @@ public class Zoo {
         animalList.add(wally);
         animalList.add(marty);
 
+        List<Carnivores> carnivoresList = new ArrayList<>();
+        carnivoresList.add(henk);
+        carnivoresList.add(dora);
+        carnivoresList.add(wally);
 
+        List<Herbivores> herbivoresList = new ArrayList<>();
+        herbivoresList.add(elsa);
+        herbivoresList.add(dora);
+        herbivoresList.add(marty);
+
+        List<TrickAnimals> trickAnimalsList = new ArrayList<>();
+        trickAnimalsList.add(wally);
+        trickAnimalsList.add(dora);
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Voer uw command in: ");
@@ -47,19 +59,14 @@ public class Zoo {
                        animalList.forEach(Animal::sayHello);
                         break;
                     case "give meat":
-                        wally.eatMeat();
+                        carnivoresList.forEach(Carnivores::eatMeat);
                         break;
                     case "give leaves":
-                        elsa.eatLeaves();
-                        dora.eatLeaves();
-                        marty.eatLeaves();
+                        herbivoresList.forEach(Herbivores::eatLeaves);
                         break;
                     case "perform trick":
-                        dora.performTrick();
-                        wally.performTrick();
+                        trickAnimalsList.forEach(TrickAnimals::performTrick);
                         break;
-                    default:
-                        System.out.println("Not a case");
                 }
             }
         }

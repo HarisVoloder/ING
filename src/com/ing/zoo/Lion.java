@@ -1,6 +1,6 @@
 package com.ing.zoo;
 
-public class Lion implements Animal {
+public class Lion implements Animal, Carnivores {
     public String name;
     public String helloText;
     public String eatText;
@@ -15,6 +15,7 @@ public class Lion implements Animal {
         System.out.println(helloText);
     }
 
+    @Override
     public void eatMeat()
     {
         eatText = "nomnomnom thx mate";
