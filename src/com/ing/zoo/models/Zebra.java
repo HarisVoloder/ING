@@ -1,16 +1,9 @@
-package com.ing.zoo;
+package com.ing.zoo.models;
 
-import java.util.Random;
+import com.ing.zoo.interfaces.Animal;
+import com.ing.zoo.interfaces.Herbivores;
 
-public class Zebra implements Animal, Herbivores {
-    public String name;
-    public String helloText;
-    public String eatText;
-    public String trick;
-
-    public Zebra()
-    {
-    }
+public class Zebra extends AnimalAttributes implements Animal, Herbivores {
 
     public Zebra(String name) {
         this.name = name;

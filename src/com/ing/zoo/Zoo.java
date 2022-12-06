@@ -1,5 +1,11 @@
 package com.ing.zoo;
 
+import com.ing.zoo.interfaces.Animal;
+import com.ing.zoo.interfaces.Carnivores;
+import com.ing.zoo.interfaces.Herbivores;
+import com.ing.zoo.interfaces.TrickAnimals;
+import com.ing.zoo.models.*;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -24,6 +30,8 @@ public class Zoo {
         Pig dora = new Pig("dora");
         Tiger wally = new Tiger("wally");
         Zebra marty = new Zebra("marty");
+        Cow piet = new Cow("piet");
+        Bear peter = new Bear("peter");
 
         var animalList = new ArrayList<Animal>() {{
             add(henk);
@@ -31,7 +39,10 @@ public class Zoo {
             add(dora);
             add(wally);
             add(marty);
+            add(piet);
+            add(peter);
         }};
+
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Voer uw command in: ");
@@ -48,6 +59,8 @@ public class Zoo {
                 case "dora" -> dora.sayHello();
                 case "wally" -> wally.sayHello();
                 case "marty" -> marty.sayHello();
+                case "piet" -> piet.sayHello();
+                case "peter" -> peter.sayHello();
             }
         } else {
             switch (List.of(commands).indexOf(input)) {

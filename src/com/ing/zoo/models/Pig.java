@@ -1,16 +1,14 @@
-package com.ing.zoo;
+package com.ing.zoo.models;
+
+import com.ing.zoo.interfaces.Animal;
+import com.ing.zoo.interfaces.Carnivores;
+import com.ing.zoo.interfaces.Herbivores;
+import com.ing.zoo.interfaces.TrickAnimals;
 
 import java.util.Random;
 
-public class Pig implements Animal, Herbivores, Carnivores, TrickAnimals{
-    public String name;
-    public String helloText;
-    public String eatText;
+public class Pig extends AnimalAttributes implements Animal, Herbivores, Carnivores, TrickAnimals {
     public String trick;
-
-    public Pig()
-    {
-    }
 
     public Pig(String name) {
         this.name = name;

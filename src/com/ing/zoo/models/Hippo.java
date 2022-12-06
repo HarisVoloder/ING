@@ -1,13 +1,10 @@
-package com.ing.zoo;
+package com.ing.zoo.models;
 
-public class Hippo implements Animal, Herbivores {
-    public String name;
-    public String helloText;
-    public String eatText;
+import com.ing.zoo.interfaces.Animal;
+import com.ing.zoo.interfaces.Carnivores;
+import com.ing.zoo.interfaces.Herbivores;
 
-    public Hippo()
-    {
-    }
+public class Hippo  extends AnimalAttributes implements Animal, Herbivores {
 
     public Hippo(String name) {
         this.name = name;
