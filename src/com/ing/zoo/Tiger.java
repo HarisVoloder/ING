@@ -12,6 +12,10 @@ public class Tiger implements Animal, Carnivores, TrickAnimals {
     {
     }
 
+    public Tiger(String name) {
+        this.name = name;
+    }
+
     @Override
     public void sayHello() {
         helloText = "rraaarww";

@@ -12,6 +12,10 @@ public class Zebra implements Animal, Herbivores {
     {
     }
 
+    public Zebra(String name) {
+        this.name = name;
+    }
+
     @Override
     public void sayHello() {
         helloText = "zebra zebra";

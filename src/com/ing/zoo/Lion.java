@@ -9,6 +9,10 @@ public class Lion implements Animal, Carnivores {
     {
     }
 
+    public Lion(String name) {
+        this.name = name;
+    }
+
     @Override
     public void sayHello() {
         helloText = "roooaoaaaaar";

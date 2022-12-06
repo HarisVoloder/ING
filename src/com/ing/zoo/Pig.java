@@ -12,6 +12,10 @@ public class Pig implements Animal, Herbivores, Carnivores, TrickAnimals{
     {
     }
 
+    public Pig(String name) {
+        this.name = name;
+    }
+
     @Override
     public void sayHello() {
         helloText = "splash";

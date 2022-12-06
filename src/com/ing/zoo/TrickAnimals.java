@@ -1,5 +1,5 @@
 package com.ing.zoo;
 
-public interface TrickAnimals {
+public interface TrickAnimals extends Animal {
    void performTrick();
 }

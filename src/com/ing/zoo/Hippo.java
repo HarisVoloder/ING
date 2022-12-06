@@ -9,6 +9,10 @@ public class Hippo implements Animal, Herbivores {
     {
     }
 
+    public Hippo(String name) {
+        this.name = name;
+    }
+
     @Override
     public void sayHello() {
         helloText = "splash";

@@ -1,5 +1,5 @@
 package com.ing.zoo;
 
-public interface Carnivores {
+public interface Carnivores extends Animal {
    void eatMeat();
 }
