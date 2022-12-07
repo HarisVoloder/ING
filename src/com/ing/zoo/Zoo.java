@@ -46,11 +46,10 @@ public class Zoo {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Voer uw command in: ");
 
-        String input = scanner.nextLine();
+        String input = scanner.nextLine().trim();
 
         if (input.matches("^hello\s+[a-zA-Z]+$")) {
-            String[] subStrings = input.split(" ");
-            String name = subStrings[1];
+            String name = input.split("\s+")[1];
 
             switch (name) {
                 case "henk" -> henk.sayHello();
@@ -61,7 +60,7 @@ public class Zoo {
                 case "piet" -> piet.sayHello();
                 case "peter" -> peter.sayHello();
             }
-        } else {
+        } else
             switch (List.of(commands).indexOf(input)) {
                 case HELLO_COMMAND -> animalList.forEach(Animal::sayHello);
                 case GIVE_MEAT -> getStreamSubsetOf(animalList, Carnivores.class).forEach(Carnivores::eatMeat);
@@ -71,7 +70,7 @@ public class Zoo {
                         .forEach(TrickAnimals::performTrick);
                 default -> System.out.println("Unknown command: " + input);
             }
-        }
+
     }
 
     private static <A extends Animal> Stream<A> getStreamSubsetOf(List<Animal> list, Class<A> clazz) {
