@@ -12,12 +12,12 @@ import java.util.Scanner;
 import java.util.stream.Stream;
 
 public class Zoo {
-    public static final int HELLO_COMMAND = 0;
-    public static final int GIVE_LEAVES = 1;
-    public static final int GIVE_MEAT = 2;
-    public static final int PERFORM_TRICK = 3;
 
     public static void main(String[] args) {
+        final int HELLO_COMMAND = 0;
+        final int GIVE_LEAVES = 1;
+        final int GIVE_MEAT = 2;
+        final int PERFORM_TRICK = 3;
 
         String[] commands = new String[4];
         commands[HELLO_COMMAND] = "hello";
@@ -42,7 +42,6 @@ public class Zoo {
             add(piet);
             add(peter);
         }};
-
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Voer uw command in: ");
