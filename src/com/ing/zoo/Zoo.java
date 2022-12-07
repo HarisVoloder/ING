@@ -75,7 +75,7 @@ public class Zoo {
         }
     }
 
-    private static <A extends Animal> Stream<A> getStreamSubsetOf(List<? extends Animal> list, Class<A> clazz) {
+    private static <A extends Animal> Stream<A> getStreamSubsetOf(List<Animal> list, Class<A> clazz) {
         return list.stream()
                 .filter(clazz::isInstance)
                 .map(clazz::cast);
